@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assemble Workstation – Smart Factory Use Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Assemble Workstation: guided step-by-step drone assembly station with visual instructions and MES integration." />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="KACST logo"></a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <a href="smart-locker.html">Smart Locker</a>
+        <a href="printer-farm.html">3D Printer Farm</a>
+        <a href="quality-arm.html">Quality Arm Check</a>
+        <a href="amr.html">AMR</a>
+        <a href="assemble.html">Assemble</a>
+        <a href="packing.html">Packing</a>
+        <a href="cobot.html">Cobot</a>
+        <a href="demanufacturing.html">Demanufacturing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Assemble Workstation</h1>
+      <p class="sub">Guided, step-by-step drone assembly with integrated quality checkpoints.</p>
+      <div class="cta">
+        <a class="btn primary" href="#features">See Features</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="container">
+    <div class="section-body">
+      <div class="pic">
+        <div class="media">
+          <img src="assets/assambling-pic.jpg" alt="Assemble Workstation" width="448" height="597">
+        </div>
+      </div>
+      <div class="text">
+        <p>The Assemble Workstation provides operators with interactive, on-screen instructions for each stage of drone assembly. Integrated with the MES, it ensures every component is placed correctly, tools are calibrated, and torque settings are verified before moving to the next step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Key Features</h2>
+        <span class="muted">Precision • Guidance • Traceability</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="tag">Guidance</span><h3>Step-by-step instructions</h3><p>Interactive visual aids with animations and photos.</p></div>
+        <div class="card"><span class="tag">Verification</span><h3>Tool calibration checks</h3><p>Ensures torque wrenches and drivers meet spec before use.</p></div>
+        <div class="card"><span class="tag">Data Capture</span><h3>Component tracking</h3><p>Scans serial numbers for assembly traceability.</p></div>
+        <div class="card"><span class="tag">Integration</span><h3>MES connected</h3><p>Syncs work orders and progress in real-time.</p></div>
+        <div class="card"><span class="tag">Safety</span><h3>Ergonomic layout</h3><p>Minimizes strain and maximizes operator comfort.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Benefits</h2>
+        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Fewer errors</h3><p>Visual checks reduce assembly mistakes.</p></div>
+        <div class="card"><h3>Faster onboarding</h3><p>New workers learn the process quickly.</p></div>
+        <div class="card"><h3>Consistent quality</h3><p>Every unit meets the same build standard.</p></div>
+        <div class="card"><h3>Real-time reporting</h3><p>Supervisors track progress live.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <span class="muted">Five-step assembly cycle</span>
+      </div>
+      <div class="section-body">
+        <div class="text">
+          <ol>
+            <li><strong>Load work order</strong> — MES assigns the assembly task.</li>
+            <li><strong>Prepare parts</strong> — Operator collects required components.</li>
+            <li><strong>Follow guided steps</strong> — Visual instructions lead each action.</li>
+            <li><strong>Perform quality checks</strong> — Scan and verify key assemblies.</li>
+            <li><strong>Mark complete</strong> — Unit is released to the next workstation.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Smart Factory Demo • Assemble Workstation</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

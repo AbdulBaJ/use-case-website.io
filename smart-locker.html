@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Locker – Smart Factory Use Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Quick fix so the header shows your logo image */
+    .logo{display:inline-flex;align-items:center}
+    .logo img{height:40px;width:auto;border-radius:6px}
+  </style>
+<meta name="description" content="Smart Locker: automated, intelligent, and access‑controlled inventory for consumables and high‑value items. Modeled after Bossard's SmartLocker information architecture." />
+</head>
+<body>
+  <!-- Shared header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="KACST logo"></a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <a href="index.html#use-cases">All Use Cases</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Smart Locker</h1>
+      <p class="sub">Fully automated, intelligent, and access‑controlled inventory system ideal for storing consumables and high‑value items.</p>
+      <div class="cta">
+        <a class="btn primary" href="#features">See Features</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual / media placeholder -->
+  <section class="container">
+    <div class="section-body">
+      
+      <div class="text"><div class="pic">
+  <img src="assets/smart-locker-pic.png" alt="Smart Locker in factory" style="border-radius:12px;">
+</div>
+
+        <p>Use Smart Locker to manage controlled items with audit‑ready access logs, real‑time stock visibility, and automated replenishment triggers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature list (modeled after Bossard SmartLocker brochure categories) -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Key Features</h2>
+        <span class="muted">Automated • Intelligent • Controlled</span>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Access Control</span>
+          <h3>RFID‑based access</h3>
+          <p>Doors unlock via authorized RFID cards to ensure only permitted users can withdraw materials.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Usage Control</span>
+          <h3>Per‑access tracking</h3>
+          <p>Each access event is logged to tie consumption to users, jobs, or cost centers.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Automation</span>
+          <h3>Fully automated cabinet</h3>
+          <p>Minimizes manual steps from access to stock updates, with error‑proof logic.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Sensors</span>
+          <h3>Integrated weight sensors</h3>
+          <p>Physical stock measurement detects quantity changes after each transaction.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Error‑proof</span>
+          <h3>Anomaly detection</h3>
+          <p>Automated checks help identify discrepancies between expected and actual stock.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Full Cycle</span>
+          <h3>End‑to‑end control</h3>
+          <p>From access to replenishment signals, keep the entire inventory loop under control.</p>
+        </div>
+        <div class="card">
+          <span class="tag">ARIMS</span>
+          <h3>Operations dashboard</h3>
+          <p>Inventory data and user events are published to your operations dashboard via API.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Benefits</h2>
+        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Usage accountability</h3><p>Full usage control per access event.</p></div>
+        <div class="card"><h3>Cost allocation</h3><p>Automatically link withdrawals to cost centers or jobs.</p></div>
+        <div class="card"><h3>Theft protection</h3><p>Controlled access and audit trails improve security.</p></div>
+        <div class="card"><h3>Faster replenishment</h3><p>Shortened order and delivery cycles with automated triggers.</p></div>
+        <div class="card"><h3>Easy restocking</h3><p>Replenish directly — no repacking required.</p></div>
+        <div class="card"><h3>High visibility</h3><p>Clear‑door concept for quick checks and accessibility.</p></div>
+        <div class="card"><h3>Efficiency & transparency</h3><p>Improve process efficiency with full data transparency.</p></div>
+        <div class="card"><h3>Low maintenance</h3><p>Maintenance‑free design minimizes downtime.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <span class="muted">Five simple steps</span>
+      </div>
+      <div class="section-body">
+        <div class="text">
+          <ol>
+            <li><strong>Continuous stock monitoring</strong> — Smart Locker continuously monitors stock levels.</li>
+            <li><strong>Access control</strong> — User unlocks with an RFID card and withdraws items.</li>
+            <li><strong>Storage control</strong> — After doors close, the system determines new stock levels.</li>
+            <li><strong>Usage control</strong> — User info and updated stock are sent to the dashboard (API available).</li>
+            <li><strong>Replenishment needs</strong> — Automatic notifications are generated when thresholds are reached.</li>
+          </ol>
+        </div>
+        <div class="pic"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Callouts / CTAs -->
+  <section class="container">
+    <div class="section-head">
+      <h2>Get started</h2>
+      <span class="muted">Add specs, photos, and ERP/MES integration details here.</span>
+    </div>
+    <div class="grid">
+      <a class="card" href="index.html#use-cases"><span class="tag">Back</span><h3>Return to all use cases</h3><p>Explore the full drone production flow.</p></a>
+      <div class="card"><span class="tag">Assets</span><h3>Brochure / Datasheet</h3><p>Place your local PDF in <code>assets/</code> and link it here.</p></div>
+      <div class="card"><span class="tag">Integration</span><h3>Dashboard & API</h3><p>Describe how this locker feeds your ARIMS/MES/ERP.</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Smart Factory Demo • Smart Locker</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cobot Handling – Smart Factory Use Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Cobot Handling: collaborative robot that moves packed boxes to organized storage for forklift pickup." />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="KACST logo"></a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <a href="smart-locker.html">Smart Locker</a>
+        <a href="printer-farm.html">3D Printer Farm</a>
+        <a href="quality-arm.html">Quality Arm Check</a>
+        <a href="amr.html">AMR</a>
+        <a href="assemble.html">Assemble</a>
+        <a href="packing.html">Packing</a>
+        <a href="cobot.html">Cobot</a>
+        <a href="demanufacturing.html">Demanufacturing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Cobot Handling</h1>
+      <p class="sub">Collaborative robot transfers packed boxes to organized storage with safety sensors and flexible positioning.</p>
+      <div class="cta">
+        <a class="btn primary" href="#features">See Features</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image & Intro -->
+  <section class="container">
+    <div class="section-body">
+      <div class="pic">
+        <div class="media">
+          <img src="assets/cobot-pic.jpg" alt="Cobot Handling in Smart Factory">
+        </div>
+      </div>
+      <div class="text">
+        <p>The <strong>Cobot Handling</strong> station uses a collaborative robotic arm to move packed and labeled boxes from the packing station to a designated storage area. With built-in sensors, the cobot ensures safe operation around people while maintaining high throughput and precise placement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Key Features</h2>
+        <span class="muted">Safety • Flexibility • Efficiency</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="tag">Safety</span><h3>Collision detection</h3><p>Stops instantly when obstacles are detected.</p></div>
+        <div class="card"><span class="tag">Precision</span><h3>Accurate placement</h3><p>Places boxes within millimeter tolerance.</p></div>
+        <div class="card"><span class="tag">Flexibility</span><h3>Multi-size handling</h3><p>Adjusts to various box sizes without tooling changes.</p></div>
+        <div class="card"><span class="tag">Integration</span><h3>MES & WMS ready</h3><p>Coordinates with production and storage databases.</p></div>
+        <div class="card"><span class="tag">Mobility</span><h3>Repositionable base</h3><p>Easy to move for different workflows.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Benefits</h2>
+        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Labor savings</h3><p>Reduces manual lifting and repetitive strain injuries.</p></div>
+        <div class="card"><h3>Consistency</h3><p>Same placement accuracy every time.</p></div>
+        <div class="card"><h3>Scalability</h3><p>Easily deploy more units as demand grows.</p></div>
+        <div class="card"><h3>Safety</h3><p>Operates alongside people without fencing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <span class="muted">Four-step handling process</span>
+      </div>
+      <div class="section-body">
+        <div class="text">
+          <ol>
+            <li><strong>Receive box</strong> — Detects incoming packed box from conveyor or packing station.</li>
+            <li><strong>Grip & lift</strong> — Uses vacuum or gripper tool to safely pick up the box.</li>
+            <li><strong>Transport</strong> — Moves box to assigned storage rack or pallet.</li>
+            <li><strong>Release & confirm</strong> — Places box precisely, logs action to MES/WMS.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Smart Factory Demo • Cobot Handling</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

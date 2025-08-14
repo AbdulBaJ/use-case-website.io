@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quality Drone Arm Check – Smart Factory Use Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Quality Drone Arm Check: automated vision inspection and dimensional validation for 3D printed drone arms, ensuring high quality before assembly." />
+</head>
+<body>
+  <!-- Shared header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="KACST logo"></a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <a href="smart-locker.html">Smart Locker</a>
+        <a href="printer-farm.html">3D Printer Farm</a>
+        <a href="quality-arm.html">Quality Arm Check</a>
+        <a href="amr.html">AMR</a>
+        <a href="assemble.html">Assemble</a>
+        <a href="packing.html">Packing</a>
+        <a href="cobot.html">Cobot</a>
+        <a href="demanufacturing.html">Demanufacturing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Quality Drone Arm Check</h1>
+      <p class="sub">Automated vision inspection and dimensional validation for 3D printed drone arms to ensure defect-free production.</p>
+      <div class="cta">
+        <a class="btn primary" href="#features">See Features</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image & Intro -->
+  <section class="container">
+    <div class="section-body">
+      <div class="pic">
+        <div class="media">
+          <img src="assets/quilty-arm-check.jpg" alt="Quality Drone Arm Check" width="448" height="597">
+        </div>
+      </div>
+      <div class="text">
+        <p>The Quality Drone Arm Check station verifies every printed arm for dimensional accuracy, surface integrity, and assembly readiness. High-resolution cameras and sensors detect imperfections before they reach assembly, reducing rework and waste.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Key Features</h2>
+        <span class="muted">Precision • Automation • Reliability</span>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Vision System</span>
+          <h3>Automated optical inspection</h3>
+          <p>High-resolution cameras detect cracks, deformities, and surface defects.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Dimensional Check</span>
+          <h3>Precision measurement</h3>
+          <p>Laser or structured light sensors verify exact dimensions against CAD models.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Data Logging</span>
+          <h3>Traceability</h3>
+          <p>Inspection results stored with part ID for complete quality history.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Automation</span>
+          <h3>Hands-free operation</h3>
+          <p>Automated arm positioning for rapid inspection without manual handling.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Integration</span>
+          <h3>MES & ERP connectivity</h3>
+          <p>Inspection data fed directly to manufacturing execution and planning systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Benefits</h2>
+        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Reduced waste</h3><p>Defective arms are identified before assembly.</p></div>
+        <div class="card"><h3>Improved quality</h3><p>Ensures only dimensionally accurate parts are used.</p></div>
+        <div class="card"><h3>Faster inspections</h3><p>Automated checks reduce cycle time.</p></div>
+        <div class="card"><h3>Traceability</h3><p>Link defects to production batches and printers.</p></div>
+        <div class="card"><h3>Lower costs</h3><p>Minimize rework and assembly downtime.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <span class="muted">Five simple steps</span>
+      </div>
+      <div class="section-body">
+        <div class="text">
+          <ol>
+            <li><strong>Receive part</strong> — The printed arm is placed on the inspection fixture.</li>
+            <li><strong>Automated scanning</strong> — Cameras and sensors capture surface and dimensional data.</li>
+            <li><strong>Analysis</strong> — System compares measurements to design specifications.</li>
+            <li><strong>Pass/Fail decision</strong> — Accepted parts move to assembly; failed parts go to rework.</li>
+            <li><strong>Data upload</strong> — Results sent to MES/ERP for tracking and reporting.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Smart Factory Demo • Quality Drone Arm Check</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

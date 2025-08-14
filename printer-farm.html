@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Printer Farm – Smart Factory Use Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="High-throughput 3D printer farm with shared queue, standardized profiles, live monitoring, and post-processing workflow." />
+</head>
+<body>
+  <!-- Shared header with logo -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Home">
+        <img src="assets/logo.png" alt="KACST logo">
+      </a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <a href="index.html#use-cases">All Use Cases</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>3D Printer Farm</h1>
+      <p class="sub">Scalable resin/FDM production with shared job queue, standardized material profiles, and real-time monitoring for consistent, high-throughput parts.</p>
+      <div class="cta">
+        <a class="btn primary" href="#features">See Features</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual / media -->
+  <section class="container">
+    <div class="section-body">
+      <div class="pic">
+        <img src="assets/printer-farm-pic.jpg" alt="3D printer farm" style="border-radius:12px;">
+      </div>
+      <div class="text">
+        <p>Centralized management of multiple printers with a shared queue and quality presets ensures repeatable parts for the drone line. Monitoring, alerts, and traceability reduce scrap and speed up release to downstream stations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Key Features</h2>
+        <span class="muted">Queue • Profiles • Monitoring</span>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Queue</span>
+          <h3>Shared job scheduling</h3>
+          <p>Distribute jobs across all printers by availability, material, and build volume.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Profiles</span>
+          <h3>Standardized settings</h3>
+          <p>Material/part presets for strength & tolerance.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Monitoring</span>
+          <h3>Live status & alerts</h3>
+          <p>Track progress, failures, and completion time; receive notifications on exceptions.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Calibration</span>
+          <h3>Quality checks</h3>
+          <p>Regular maintenance to ensure dimensional accuracy.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Traceability</span>
+          <h3>Batch & lot tracking</h3>
+          <p>Bind parts to printer, profile, material lot, and operator.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Post-process</span>
+          <h3>Wash, cure & inspect</h3>
+          <p>Guided post-processing flow before release to Quality Check.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Benefits</h2>
+        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Throughput</h3><p>Parallel printing scales output.</p></div>
+        <div class="card"><h3>Consistency</h3><p>Standard profiles reduce variation.</p></div>
+        <div class="card"><h3>Uptime</h3><p>Preventive calibration reduces downtime.</p></div>
+        <div class="card"><h3>Labor savings</h3><p>Automated queue and alerts.</p></div>
+        <div class="card"><h3>Data & traceability</h3><p>History per part for improvement.</p></div>
+        <div class="card"><h3>Faster handoff</h3><p>Clear pass criteria to next step.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <span class="muted">Five simple steps</span>
+      </div>
+      <div class="section-body">
+        <div class="text">
+          <ol>
+            <li><strong>Intake</strong> — Submit parts with material and profile selection.</li>
+            <li><strong>Scheduling</strong> — Queue assigns jobs by capacity and due date.</li>
+            <li><strong>Printing</strong> — Live monitoring; alerts on failure or completion.</li>
+            <li><strong>Post-processing</strong> — Wash/cure (resin) or cleanup (FDM) and inspect.</li>
+            <li><strong>Release</strong> — Pass parts move to Quality Check; fails reprint.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTAs -->
+  <section class="container">
+    <div class="section-head">
+      <h2>Get started</h2>
+      <span class="muted">Add photos, profiles, and integrations.</span>
+    </div>
+    <div class="grid">
+      <a class="card" href="index.html#use-cases"><span class="tag">Back</span><h3>Return to all use cases</h3><p>Explore the full drone production flow.</p></a>
+      <div class="card"><span class="tag">Assets</span><h3>Profiles & SOPs</h3><p>Drop PDFs in <code>assets/</code> and link here.</p></div>
+      <div class="card"><span class="tag">Integration</span><h3>Queue API</h3><p>Explain how jobs are created from MES/ERP.</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Smart Factory Demo • 3D Printer Farm</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
