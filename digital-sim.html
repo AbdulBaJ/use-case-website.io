@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Simulation – Smart Factory Use Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Digital Simulation: virtual twin of the drone production line for planning, testing, and optimization before real-world execution." />
+</head>
+<body>
+  <!-- Shared header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Home"><img src="assets/logo.png" alt="KACST logo"></a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <a href="smart-locker.html">Smart Locker</a>
+        <a href="printer-farm.html">3D Printer Farm</a>
+        <a href="quality-arm.html">Quality Arm Check</a>
+        <a href="amr.html">AMR</a>
+        <a href="assemble.html">Assemble</a>
+        <a href="packing.html">Packing + Cobot</a>
+        <a href="demanufacturing.html">Demanufacturing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Digital Simulation</h1>
+      <p class="sub">Create a virtual twin of the drone line to validate flow, cycle time, and resources before you build.</p>
+      <div class="cta">
+        <a class="btn primary" href="#features">See Features</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image & Intro -->
+  <section class="container">
+    <div class="section-body">
+      <div class="pic">
+        <div class="media">
+          <img src="assets/digtal-sim.jpeg" alt="Digital simulation of the drone production line" width="448" height="597">
+        </div>
+      </div>
+      <div class="text">
+        <p>Digital Simulation lets you model the entire production system—machines, workers, buffers, and robots—so you can
+          test scenarios, remove bottlenecks, and estimate throughput before commissioning. Use it to experiment safely with
+          layouts, batch sizes, shift patterns, and routing strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Key Features</h2>
+        <span class="muted">Virtual Commissioning • Layout Planning • Throughput Analysis</span>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Modeling</span>
+          <h3>Process & layout builder</h3>
+          <p>Define stations, conveyors, AMRs, work-in-progress, and routing rules with resource constraints.</p>
+        </div>
+        <div class="card">
+          <span class="tag">KPIs</span>
+          <h3>Cycle & takt time</h3>
+          <p>Estimate takt time, station utilization, WIP levels, and overall throughput under realistic variability.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Scenarios</span>
+          <h3>What-if experiments</h3>
+          <p>Compare layouts, machine counts, staffing, and batch sizes to find the sweet spot for output vs. cost.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Integration</span>
+          <h3>PLC/MES signals</h3>
+          <p>Emulate I/O and handshake logic for virtual commissioning before connecting the real hardware.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Visualization</span>
+          <h3>2D/3D playback</h3>
+          <p>Animate material flow, queues, and robot paths to quickly spot bottlenecks and starvation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Benefits</h2>
+        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Faster commissioning</h3><p>Catch logic issues early and reduce on-site debugging.</p></div>
+        <div class="card"><h3>Lower risk</h3><p>Validate changes virtually before touching the real line.</p></div>
+        <div class="card"><h3>Higher throughput</h3><p>Optimize routing and buffers to eliminate bottlenecks.</p></div>
+        <div class="card"><h3>Cost savings</h3><p>Right-size equipment and labor for target takt time.</p></div>
+        <div class="card"><h3>Team alignment</h3><p>Use visuals and KPIs to align engineers and stakeholders.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <span class="muted">Five-step simulation cycle</span>
+      </div>
+      <div class="section-body">
+        <div class="text">
+          <ol>
+            <li><strong>Define scope</strong> — Choose processes (printing, quality check, AMR transfer, assembly, packing).</li>
+            <li><strong>Build the model</strong> — Add stations, resources, cycle times, failure/repair and shift rules.</li>
+            <li><strong>Connect logic</strong> — Emulate PLC/MES signals and routing priorities for realism.</li>
+            <li><strong>Run scenarios</strong> — Vary layouts, buffers, and staffing; collect KPIs and visualize queues.</li>
+            <li><strong>Deploy changes</strong> — Apply the best scenario to the real line and monitor results.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Smart Factory  • Digital Simulation</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
