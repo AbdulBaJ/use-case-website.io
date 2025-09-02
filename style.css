@@ -21,7 +21,7 @@ img{max-width:100%;display:block}
   border-bottom:1px solid rgba(255,255,255,.06)}
 .header-inner{display:flex;align-items:center;gap:18px; padding:14px 0}
 .logo{display:inline-flex;align-items:center}
-.logo img{height:40px;width:auto;border-radius:6px}
+.logo img{height:120px;width:auto;border-radius:6px}
 .title{font-weight:700;letter-spacing:.2px}
 nav{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}
 nav a{padding:8px 12px;border-radius:999px;border:1px solid transparent}
