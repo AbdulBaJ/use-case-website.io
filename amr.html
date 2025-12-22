@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>Autonomous Mobile Robot (AMR) – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Autonomous Mobile Robot (AMR): driverless transport for transferring approved parts between stations, improving speed and reducing labor costs." />
 </head>
+
 <body>
+  <!-- Shared header -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
-          <nav aria-label="Primary">
-        <a href="digital-sim.html">Digital Simulation</a>
-        <a href="smart-locker.html">Smart Locker</a>
-        <a href="printer-farm.html">3D Printer Farm</a>
-        <a href="quality-arm.html">Quality Arm Check</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="packing.html">Packing + Cobot</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+      <div class="title">Smart Factory – Drone Line</div>
+      <nav aria-label="Primary">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -58,7 +70,9 @@
         </div>
       </div>
       <div class="text">
-        <p>The Autonomous Mobile Robot (AMR) streamlines material handling by autonomously transporting printed arms, components, or finished drones between workstations. It navigates factory layouts dynamically, avoiding obstacles and optimizing delivery routes.</p>
+        <p>The Autonomous Mobile Robot (AMR) streamlines material handling by autonomously transporting printed arms,
+          components, or finished drones between workstations. It navigates factory layouts dynamically, avoiding
+          obstacles and optimizing delivery routes.</p>
       </div>
     </div>
   </section>
@@ -105,14 +119,28 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Labor savings</h3><p>Reduces manual material handling.</p></div>
-        <div class="card"><h3>Efficiency</h3><p>Delivers parts exactly when needed, reducing idle time.</p></div>
-        <div class="card"><h3>Safety</h3><p>Minimizes risk of injury from manual transport.</p></div>
-        <div class="card"><h3>Scalability</h3><p>Multiple AMRs can work in parallel without collisions.</p></div>
-        <div class="card"><h3>Flexibility</h3><p>Can adapt to layout changes without fixed infrastructure.</p></div>
+        <div class="card">
+          <h3>Labor savings</h3>
+          <p>Reduces manual material handling.</p>
+        </div>
+        <div class="card">
+          <h3>Efficiency</h3>
+          <p>Delivers parts exactly when needed, reducing idle time.</p>
+        </div>
+        <div class="card">
+          <h3>Safety</h3>
+          <p>Minimizes risk of injury from manual transport.</p>
+        </div>
+        <div class="card">
+          <h3>Scalability</h3>
+          <p>Multiple AMRs can work in parallel without collisions.</p>
+        </div>
+        <div class="card">
+          <h3>Flexibility</h3>
+          <p>Can adapt to layout changes without fixed infrastructure.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -140,10 +168,17 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory Demo • Autonomous Mobile Robot</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>

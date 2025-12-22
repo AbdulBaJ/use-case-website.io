@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>3D Printer Farm – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="High-throughput 3D printer farm with shared queue, standardized profiles, live monitoring, and post-processing workflow." />
 </head>
+
 <body>
+  <!-- Shared header with logo -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
+      <div class="title">Smart Factory – Drone Line</div>
       <nav aria-label="Primary">
-        <a href="digital-sim.html">Digital Simulation</a>
-        <a href="smart-locker.html">Smart Locker</a>
-        <a href="quality-arm.html">Quality Arm Check</a>
-        <a href="amr.html">AMR</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="packing.html">Packing + Cobot</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -41,7 +53,8 @@
   <section class="hero">
     <div class="container">
       <h1>3D Printer Farm</h1>
-      <p class="sub">Scalable resin/FDM production with shared job queue, standardized material profiles, and real-time monitoring for consistent, high-throughput parts.</p>
+      <p class="sub">Scalable resin/FDM production with shared job queue, standardized material profiles, and real-time
+        monitoring for consistent, high-throughput parts.</p>
       <div class="cta">
         <a class="btn primary" href="#features">See Features</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
@@ -53,10 +66,14 @@
   <section class="container">
     <div class="section-body">
       <div class="pic">
-        <img src="assets/printer-farm-pic.jpg" alt="3D printer farm" style="border-radius:12px;">
+        <div class="media">
+          <img src="assets/printer-farm-pic.jpg" alt="3D printer farm">
+        </div>
       </div>
       <div class="text">
-        <p>Centralized management of multiple printers with a shared queue and quality presets ensures repeatable parts for the drone line. Monitoring, alerts, and traceability reduce scrap and speed up release to downstream stations.</p>
+        <p>Centralized management of multiple printers with a shared queue and quality presets ensures repeatable parts
+          for the drone line. Monitoring, alerts, and traceability reduce scrap and speed up release to downstream
+          stations.</p>
       </div>
     </div>
   </section>
@@ -108,15 +125,32 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Throughput</h3><p>Parallel printing scales output.</p></div>
-        <div class="card"><h3>Consistency</h3><p>Standard profiles reduce variation.</p></div>
-        <div class="card"><h3>Uptime</h3><p>Preventive calibration reduces downtime.</p></div>
-        <div class="card"><h3>Labor savings</h3><p>Automated queue and alerts.</p></div>
-        <div class="card"><h3>Data & traceability</h3><p>History per part for improvement.</p></div>
-        <div class="card"><h3>Faster handoff</h3><p>Clear pass criteria to next step.</p></div>
+        <div class="card">
+          <h3>Throughput</h3>
+          <p>Parallel printing scales output.</p>
+        </div>
+        <div class="card">
+          <h3>Consistency</h3>
+          <p>Standard profiles reduce variation.</p>
+        </div>
+        <div class="card">
+          <h3>Uptime</h3>
+          <p>Preventive calibration reduces downtime.</p>
+        </div>
+        <div class="card">
+          <h3>Labor savings</h3>
+          <p>Automated queue and alerts.</p>
+        </div>
+        <div class="card">
+          <h3>Data & traceability</h3>
+          <p>History per part for improvement.</p>
+        </div>
+        <div class="card">
+          <h3>Faster handoff</h3>
+          <p>Clear pass criteria to next step.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -149,18 +183,34 @@
       <span class="muted">Add photos, profiles, and integrations.</span>
     </div>
     <div class="grid">
-      <a class="card" href="index.html#use-cases"><span class="tag">Back</span><h3>Return to all use cases</h3><p>Explore the full drone production flow.</p></a>
-      <div class="card"><span class="tag">Assets</span><h3>Profiles & SOPs</h3><p>Drop PDFs in <code>assets/</code> and link here.</p></div>
-      <div class="card"><span class="tag">Integration</span><h3>Queue API</h3><p>Explain how jobs are created from MES/ERP.</p></div>
+      <a class="card" href="index.html#use-cases"><span class="tag">Back</span>
+        <h3>Return to all use cases</h3>
+        <p>Explore the full drone production flow.</p>
+      </a>
+      <div class="card"><span class="tag">Assets</span>
+        <h3>Profiles & SOPs</h3>
+        <p>Drop PDFs in <code>assets/</code> and link here.</p>
+      </div>
+      <div class="card"><span class="tag">Integration</span>
+        <h3>Queue API</h3>
+        <p>Explain how jobs are created from MES/ERP.</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory Demo • 3D Printer Farm</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>

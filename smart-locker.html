@@ -1,39 +1,63 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>Smart Locker – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .logo {
+      display: inline-flex;
+      align-items: center
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 6px
+    }
+  </style>
+  <meta name="description"
+    content="Smart Locker: automated, intelligent, and access-controlled inventory for consumables and high-value items." />
 </head>
+
 <body>
+  <!-- Shared header -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
+      <div class="title">Smart Factory – Drone Line</div>
       <nav aria-label="Primary">
-        <a href="digital-sim.html">Digital Simulation</a>
-        <a href="printer-farm.html">3D Printer Farm</a>
-        <a href="quality-arm.html">Quality Arm Check</a>
-        <a href="amr.html">AMR</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="packing.html">Packing + Cobot</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -41,7 +65,8 @@
   <section class="hero">
     <div class="container">
       <h1>Smart Locker</h1>
-      <p class="sub">Fully automated, intelligent, and access-controlled inventory system ideal for storing consumables and high-value items.</p>
+      <p class="sub">Fully automated, intelligent, and access-controlled inventory system ideal for storing consumables
+        and high-value items.</p>
       <div class="cta">
         <a class="btn primary" href="#features">See Features</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
@@ -49,7 +74,7 @@
     </div>
   </section>
 
-  <!-- Image & Intro -->
+  <!-- Image & Intro (same structure as digital-sim) -->
   <section class="container">
     <div class="section-body">
       <div class="pic">
@@ -58,7 +83,8 @@
         </div>
       </div>
       <div class="text">
-        <p>Use Smart Locker to manage controlled items with audit-ready access logs, real-time stock visibility, and automated replenishment triggers. Ideal for consumables and high-value parts with role-based permissions.</p>
+        <p>Use Smart Locker to manage controlled items with audit-ready access logs, real-time stock visibility, and
+          automated replenishment triggers. Ideal for consumables and high-value parts with role-based permissions.</p>
       </div>
     </div>
   </section>
@@ -115,17 +141,40 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Usage accountability</h3><p>Full usage control per access event.</p></div>
-        <div class="card"><h3>Cost allocation</h3><p>Automatically link withdrawals to cost centers or jobs.</p></div>
-        <div class="card"><h3>Theft protection</h3><p>Controlled access and audit trails improve security.</p></div>
-        <div class="card"><h3>Faster replenishment</h3><p>Shortened order and delivery cycles with automated triggers.</p></div>
-        <div class="card"><h3>Easy restocking</h3><p>Replenish directly — no repacking required.</p></div>
-        <div class="card"><h3>High visibility</h3><p>Clear-door concept for quick checks and accessibility.</p></div>
-        <div class="card"><h3>Efficiency & transparency</h3><p>Improve process efficiency with full data transparency.</p></div>
-        <div class="card"><h3>Low maintenance</h3><p>Maintenance-free design minimizes downtime.</p></div>
+        <div class="card">
+          <h3>Usage accountability</h3>
+          <p>Full usage control per access event.</p>
+        </div>
+        <div class="card">
+          <h3>Cost allocation</h3>
+          <p>Automatically link withdrawals to cost centers or jobs.</p>
+        </div>
+        <div class="card">
+          <h3>Theft protection</h3>
+          <p>Controlled access and audit trails improve security.</p>
+        </div>
+        <div class="card">
+          <h3>Faster replenishment</h3>
+          <p>Shortened order and delivery cycles with automated triggers.</p>
+        </div>
+        <div class="card">
+          <h3>Easy restocking</h3>
+          <p>Replenish directly — no repacking required.</p>
+        </div>
+        <div class="card">
+          <h3>High visibility</h3>
+          <p>Clear-door concept for quick checks and accessibility.</p>
+        </div>
+        <div class="card">
+          <h3>Efficiency & transparency</h3>
+          <p>Improve process efficiency with full data transparency.</p>
+        </div>
+        <div class="card">
+          <h3>Low maintenance</h3>
+          <p>Maintenance-free design minimizes downtime.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -143,8 +192,10 @@
             <li><strong>Continuous stock monitoring</strong> — Smart Locker continuously monitors stock levels.</li>
             <li><strong>Access control</strong> — User unlocks with an RFID card and withdraws items.</li>
             <li><strong>Storage control</strong> — After doors close, the system determines new stock levels.</li>
-            <li><strong>Usage control</strong> — User info and updated stock are sent to the dashboard (API available).</li>
-            <li><strong>Replenishment needs</strong> — Automatic notifications are generated when thresholds are reached.</li>
+            <li><strong>Usage control</strong> — User info and updated stock are sent to the dashboard (API available).
+            </li>
+            <li><strong>Replenishment needs</strong> — Automatic notifications are generated when thresholds are
+              reached.</li>
           </ol>
         </div>
       </div>
@@ -158,20 +209,35 @@
       <span class="muted">Add specs, photos, and ERP/MES integration details here.</span>
     </div>
     <div class="grid">
-      <a class="card" href="index.html#use-cases"><span class="tag">Back</span><h3>Return to all use cases</h3><p>Explore the full drone production flow.</p></a>
-      <div class="card"><span class="tag">Assets</span><h3>Brochure / Datasheet</h3><p>Place your local PDF in <code>assets/</code> and link it here.</p></div>
-      <div class="card"><span class="tag">Integration</span><h3>Dashboard & API</h3><p>Describe how this locker feeds your ARIMS/MES/ERP.</p></div>
+      <a class="card" href="index.html#use-cases"><span class="tag">Back</span>
+        <h3>Return to all use cases</h3>
+        <p>Explore the full drone production flow.</p>
+      </a>
+      <div class="card"><span class="tag">Assets</span>
+        <h3>Brochure / Datasheet</h3>
+        <p>Place your local PDF in <code>assets/</code> and link it here.</p>
+      </div>
+      <div class="card"><span class="tag">Integration</span>
+        <h3>Dashboard & API</h3>
+        <p>Describe how this locker feeds your ARIMS/MES/ERP.</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory Demo • Smart Locker</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>

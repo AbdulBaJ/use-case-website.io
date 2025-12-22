@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>Cobot Handling – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Cobot Handling: collaborative robot that moves packed boxes to organized storage for forklift pickup." />
 </head>
+
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
+      <div class="title">Smart Factory – Drone Line</div>
       <nav aria-label="Primary">
-        <a href="smart-locker.html">Smart Locker</a>
-        <a href="printer-farm.html">3D Printer Farm</a>
-        <a href="quality-arm.html">Quality Arm Check</a>
-        <a href="amr.html">AMR</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="packing.html">Packing + Cobot</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -41,7 +53,8 @@
   <section class="hero">
     <div class="container">
       <h1>Cobot Handling</h1>
-      <p class="sub">Collaborative robot transfers packed boxes to organized storage with safety sensors and flexible positioning.</p>
+      <p class="sub">Collaborative robot transfers packed boxes to organized storage with safety sensors and flexible
+        positioning.</p>
       <div class="cta">
         <a class="btn primary" href="#features">See Features</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
@@ -58,7 +71,9 @@
         </div>
       </div>
       <div class="text">
-        <p>The <strong>Cobot Handling</strong> station uses a collaborative robotic arm to move packed and labeled boxes from the packing station to a designated storage area. With built-in sensors, the cobot ensures safe operation around people while maintaining high throughput and precise placement.</p>
+        <p>The <strong>Cobot Handling</strong> station uses a collaborative robotic arm to move packed and labeled boxes
+          from the packing station to a designated storage area. With built-in sensors, the cobot ensures safe operation
+          around people while maintaining high throughput and precise placement.</p>
       </div>
     </div>
   </section>
@@ -71,11 +86,26 @@
         <span class="muted">Safety • Flexibility • Efficiency</span>
       </div>
       <div class="grid">
-        <div class="card"><span class="tag">Safety</span><h3>Collision detection</h3><p>Stops instantly when obstacles are detected.</p></div>
-        <div class="card"><span class="tag">Precision</span><h3>Accurate placement</h3><p>Places boxes within millimeter tolerance.</p></div>
-        <div class="card"><span class="tag">Flexibility</span><h3>Multi-size handling</h3><p>Adjusts to various box sizes without tooling changes.</p></div>
-        <div class="card"><span class="tag">Integration</span><h3>MES & WMS ready</h3><p>Coordinates with production and storage databases.</p></div>
-        <div class="card"><span class="tag">Mobility</span><h3>Repositionable base</h3><p>Easy to move for different workflows.</p></div>
+        <div class="card"><span class="tag">Safety</span>
+          <h3>Collision detection</h3>
+          <p>Stops instantly when obstacles are detected.</p>
+        </div>
+        <div class="card"><span class="tag">Precision</span>
+          <h3>Accurate placement</h3>
+          <p>Places boxes within millimeter tolerance.</p>
+        </div>
+        <div class="card"><span class="tag">Flexibility</span>
+          <h3>Multi-size handling</h3>
+          <p>Adjusts to various box sizes without tooling changes.</p>
+        </div>
+        <div class="card"><span class="tag">Integration</span>
+          <h3>MES & WMS ready</h3>
+          <p>Coordinates with production and storage databases.</p>
+        </div>
+        <div class="card"><span class="tag">Mobility</span>
+          <h3>Repositionable base</h3>
+          <p>Easy to move for different workflows.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -85,13 +115,24 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Labor savings</h3><p>Reduces manual lifting and repetitive strain injuries.</p></div>
-        <div class="card"><h3>Consistency</h3><p>Same placement accuracy every time.</p></div>
-        <div class="card"><h3>Scalability</h3><p>Easily deploy more units as demand grows.</p></div>
-        <div class="card"><h3>Safety</h3><p>Operates alongside people without fencing.</p></div>
+        <div class="card">
+          <h3>Labor savings</h3>
+          <p>Reduces manual lifting and repetitive strain injuries.</p>
+        </div>
+        <div class="card">
+          <h3>Consistency</h3>
+          <p>Same placement accuracy every time.</p>
+        </div>
+        <div class="card">
+          <h3>Scalability</h3>
+          <p>Easily deploy more units as demand grows.</p>
+        </div>
+        <div class="card">
+          <h3>Safety</h3>
+          <p>Operates alongside people without fencing.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -119,10 +160,17 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory Demo • Cobot Handling</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>

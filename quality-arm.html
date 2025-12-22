@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>Quality Drone Arm Check – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Quality Drone Arm Check: automated vision inspection and dimensional validation for 3D printed drone arms, ensuring high quality before assembly." />
 </head>
+
 <body>
+  <!-- Shared header -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
+      <div class="title">Smart Factory – Drone Line</div>
       <nav aria-label="Primary">
-        <a href="digital-sim.html">Digital Simulation</a>
-        <a href="smart-locker.html">Smart Locker</a>
-        <a href="printer-farm.html">3D Printer Farm</a>
-        <a href="amr.html">AMR</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="packing.html">Packing + Cobot</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -41,7 +53,8 @@
   <section class="hero">
     <div class="container">
       <h1>Quality Drone Arm Check</h1>
-      <p class="sub">Automated vision inspection and dimensional validation for 3D printed drone arms to ensure defect-free production.</p>
+      <p class="sub">Automated vision inspection and dimensional validation for 3D printed drone arms to ensure
+        defect-free production.</p>
       <div class="cta">
         <a class="btn primary" href="#features">See Features</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
@@ -58,7 +71,9 @@
         </div>
       </div>
       <div class="text">
-        <p>The Quality Drone Arm Check station verifies every printed arm for dimensional accuracy, surface integrity, and assembly readiness. High-resolution cameras and sensors detect imperfections before they reach assembly, reducing rework and waste.</p>
+        <p>The Quality Drone Arm Check station verifies every printed arm for dimensional accuracy, surface integrity,
+          and assembly readiness. High-resolution cameras and sensors detect imperfections before they reach assembly,
+          reducing rework and waste.</p>
       </div>
     </div>
   </section>
@@ -105,14 +120,28 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Reduced waste</h3><p>Defective arms are identified before assembly.</p></div>
-        <div class="card"><h3>Improved quality</h3><p>Ensures only dimensionally accurate parts are used.</p></div>
-        <div class="card"><h3>Faster inspections</h3><p>Automated checks reduce cycle time.</p></div>
-        <div class="card"><h3>Traceability</h3><p>Link defects to production batches and printers.</p></div>
-        <div class="card"><h3>Lower costs</h3><p>Minimize rework and assembly downtime.</p></div>
+        <div class="card">
+          <h3>Reduced waste</h3>
+          <p>Defective arms are identified before assembly.</p>
+        </div>
+        <div class="card">
+          <h3>Improved quality</h3>
+          <p>Ensures only dimensionally accurate parts are used.</p>
+        </div>
+        <div class="card">
+          <h3>Faster inspections</h3>
+          <p>Automated checks reduce cycle time.</p>
+        </div>
+        <div class="card">
+          <h3>Traceability</h3>
+          <p>Link defects to production batches and printers.</p>
+        </div>
+        <div class="card">
+          <h3>Lower costs</h3>
+          <p>Minimize rework and assembly downtime.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -141,10 +170,17 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory Demo • Quality Drone Arm Check</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>

@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>Packing Workstation – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Packing Workstation: guided packing flow with barcode validation, box presets, photo proof, and label generation." />
 </head>
+
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
+      <div class="title">Smart Factory – Drone Line</div>
       <nav aria-label="Primary">
-        <a href="digital-sim.html">Digital Simulation</a>
-        <a href="smart-locker.html">Smart Locker</a>
-        <a href="printer-farm.html">3D Printer Farm</a>
-        <a href="quality-arm.html">Quality Arm Check</a>
-        <a href="amr.html">AMR</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -41,7 +53,8 @@
   <section class="hero">
     <div class="container">
       <h1>Packing Workstation</h1>
-      <p class="sub">Guided packing with barcode checks, box/padding presets, photo proof, and shipping label generation.</p>
+      <p class="sub">Guided packing with barcode checks, box/padding presets, photo proof, and shipping label
+        generation.</p>
       <div class="cta">
         <a class="btn primary" href="#features">See Features</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
@@ -59,7 +72,9 @@
         </div>
       </div>
       <div class="text">
-        <p>The Packing Workstation ensures every drone and accessory is included and protected. Operators follow a standardized flow with barcode validation, correct box/padding selection, and automated label printing—with photo proof for traceability.</p>
+        <p>The Packing Workstation ensures every drone and accessory is included and protected. Operators follow a
+          standardized flow with barcode validation, correct box/padding selection, and automated label printing—with
+          photo proof for traceability.</p>
       </div>
     </div>
   </section>
@@ -72,12 +87,30 @@
         <span class="muted">Accuracy • Speed • Traceability</span>
       </div>
       <div class="grid">
-        <div class="card"><span class="tag">Checklist</span><h3>Accessory verification</h3><p>Guided list confirms all BOM items are present.</p></div>
-        <div class="card"><span class="tag">Validation</span><h3>Barcode scans</h3><p>Match serials and SKUs to the order before sealing.</p></div>
-        <div class="card"><span class="tag">Presets</span><h3>Box & padding rules</h3><p>Standardized materials per model reduce damage.</p></div>
-        <div class="card"><span class="tag">Labeling</span><h3>Carrier label print</h3><p>Auto-generate shipping labels and documents.</p></div>
-        <div class="card"><span class="tag">Proof</span><h3>Photo capture</h3><p>Record contents before closure for auditing.</p></div>
-        <div class="card"><span class="tag">Integration</span><h3>WMS/Carrier APIs</h3><p>Rate shop, manifest, and close-out the shipment.</p></div>
+        <div class="card"><span class="tag">Checklist</span>
+          <h3>Accessory verification</h3>
+          <p>Guided list confirms all BOM items are present.</p>
+        </div>
+        <div class="card"><span class="tag">Validation</span>
+          <h3>Barcode scans</h3>
+          <p>Match serials and SKUs to the order before sealing.</p>
+        </div>
+        <div class="card"><span class="tag">Presets</span>
+          <h3>Box & padding rules</h3>
+          <p>Standardized materials per model reduce damage.</p>
+        </div>
+        <div class="card"><span class="tag">Labeling</span>
+          <h3>Carrier label print</h3>
+          <p>Auto-generate shipping labels and documents.</p>
+        </div>
+        <div class="card"><span class="tag">Proof</span>
+          <h3>Photo capture</h3>
+          <p>Record contents before closure for auditing.</p>
+        </div>
+        <div class="card"><span class="tag">Integration</span>
+          <h3>WMS/Carrier APIs</h3>
+          <p>Rate shop, manifest, and close-out the shipment.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -87,14 +120,28 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Accuracy</h3><p>Eliminates missing items and wrong configs.</p></div>
-        <div class="card"><h3>Speed</h3><p>Repeatable flow reduces pack time.</p></div>
-        <div class="card"><h3>Damage reduction</h3><p>Right padding and box size every time.</p></div>
-        <div class="card"><h3>Traceability</h3><p>Photos and scans create a full audit trail.</p></div>
-        <div class="card"><h3>Customer experience</h3><p>Neat, consistent unboxing and documentation.</p></div>
+        <div class="card">
+          <h3>Accuracy</h3>
+          <p>Eliminates missing items and wrong configs.</p>
+        </div>
+        <div class="card">
+          <h3>Speed</h3>
+          <p>Repeatable flow reduces pack time.</p>
+        </div>
+        <div class="card">
+          <h3>Damage reduction</h3>
+          <p>Right padding and box size every time.</p>
+        </div>
+        <div class="card">
+          <h3>Traceability</h3>
+          <p>Photos and scans create a full audit trail.</p>
+        </div>
+        <div class="card">
+          <h3>Customer experience</h3>
+          <p>Neat, consistent unboxing and documentation.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -124,10 +171,17 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory Demo • Packing Workstation</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>

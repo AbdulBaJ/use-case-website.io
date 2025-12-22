@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About – Smart Factory</title>
+  <title>Digital Simulation – Smart Factory Use Case</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description"
+    content="Digital Simulation: virtual twin of the drone production line for planning, testing, and optimization before real-world execution." />
 </head>
+
 <body>
+  <!-- Shared header -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Left logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="assets/logo1.png" alt="KACST logo">
+        <!-- Fallback for logo if missing -->
+        <img src="assets/logo.png" onerror="this.style.display='none';this.parentElement.innerText='🏭 SmartFactory'"
+          alt="KACST logo">
       </a>
-
-      <!-- Title -->
-      <div class="title">
-        Smart Factory <br> Drone Line
-      </div>
-
-      <!-- Navigation -->
+      <div class="title">Smart Factory – Drone Line</div>
       <nav aria-label="Primary">
-        <a href="smart-locker.html">Smart Locker</a>
-        <a href="printer-farm.html">3D Printer Farm</a>
-        <a href="quality-arm.html">Quality Arm Check</a>
-        <a href="amr.html">AMR</a>
-        <a href="assemble.html">Assemble</a>
-        <a href="packing.html">Packing + Cobot</a>
-        <a href="demanufacturing.html">Demanufacturing</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">Use Cases ▾</button>
+        <div id="nav-links" class="nav-links">
+          <a href="digital-sim.html">Digital Simulation</a>
+          <a href="smart-locker.html">Smart Locker</a>
+          <a href="printer-farm.html">3D Printer Farm</a>
+          <a href="quality-arm.html">Quality Arm Check</a>
+          <a href="amr.html">AMR</a>
+          <a href="assemble.html">Assemble</a>
+          <a href="packing.html">Packing + Cobot</a>
+          <a href="demanufacturing.html">Demanufacturing</a>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
       </nav>
-
-      <!-- Right logo -->
-      <div class="logo-right">
-        <img src="assets/logo2.png" alt="IIoT Solutions logo">
-      </div>
     </div>
   </header>
 
@@ -41,7 +53,8 @@
   <section class="hero">
     <div class="container">
       <h1>Digital Simulation</h1>
-      <p class="sub">Create a virtual twin of the drone line to validate flow, cycle time, and resources before you build.</p>
+      <p class="sub">Create a virtual twin of the drone line to validate flow, cycle time, and resources before you
+        build.</p>
       <div class="cta">
         <a class="btn primary" href="#features">See Features</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
@@ -54,12 +67,15 @@
     <div class="section-body">
       <div class="pic">
         <div class="media">
-          <img src="assets/digtal-sim.jpeg" alt="Digital simulation of the drone production line" width="448" height="597">
+          <img src="assets/digtal-sim.jpeg" alt="Digital simulation of the drone production line" width="448"
+            height="597">
         </div>
       </div>
       <div class="text">
-        <p>Digital Simulation lets you model the entire production system—machines, workers, buffers, and robots—so you can
-          test scenarios, remove bottlenecks, and estimate throughput before commissioning. Use it to experiment safely with
+        <p>Digital Simulation lets you model the entire production system—machines, workers, buffers, and robots—so you
+          can
+          test scenarios, remove bottlenecks, and estimate throughput before commissioning. Use it to experiment safely
+          with
           layouts, batch sizes, shift patterns, and routing strategies.</p>
       </div>
     </div>
@@ -81,7 +97,8 @@
         <div class="card">
           <span class="tag">KPIs</span>
           <h3>Cycle & takt time</h3>
-          <p>Estimate takt time, station utilization, WIP levels, and overall throughput under realistic variability.</p>
+          <p>Estimate takt time, station utilization, WIP levels, and overall throughput under realistic variability.
+          </p>
         </div>
         <div class="card">
           <span class="tag">Scenarios</span>
@@ -107,14 +124,28 @@
     <div class="container">
       <div class="section-head">
         <h2>Benefits</h2>
-        <a class="btn secondary" href="#how-it-works">Skip to workflow</a>
       </div>
       <div class="grid">
-        <div class="card"><h3>Faster commissioning</h3><p>Catch logic issues early and reduce on-site debugging.</p></div>
-        <div class="card"><h3>Lower risk</h3><p>Validate changes virtually before touching the real line.</p></div>
-        <div class="card"><h3>Higher throughput</h3><p>Optimize routing and buffers to eliminate bottlenecks.</p></div>
-        <div class="card"><h3>Cost savings</h3><p>Right-size equipment and labor for target takt time.</p></div>
-        <div class="card"><h3>Team alignment</h3><p>Use visuals and KPIs to align engineers and stakeholders.</p></div>
+        <div class="card">
+          <h3>Faster commissioning</h3>
+          <p>Catch logic issues early and reduce on-site debugging.</p>
+        </div>
+        <div class="card">
+          <h3>Lower risk</h3>
+          <p>Validate changes virtually before touching the real line.</p>
+        </div>
+        <div class="card">
+          <h3>Higher throughput</h3>
+          <p>Optimize routing and buffers to eliminate bottlenecks.</p>
+        </div>
+        <div class="card">
+          <h3>Cost savings</h3>
+          <p>Right-size equipment and labor for target takt time.</p>
+        </div>
+        <div class="card">
+          <h3>Team alignment</h3>
+          <p>Use visuals and KPIs to align engineers and stakeholders.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -129,10 +160,13 @@
       <div class="section-body">
         <div class="text">
           <ol>
-            <li><strong>Define scope</strong> — Choose processes (printing, quality check, AMR transfer, assembly, packing).</li>
-            <li><strong>Build the model</strong> — Add stations, resources, cycle times, failure/repair and shift rules.</li>
+            <li><strong>Define scope</strong> — Choose processes (printing, quality check, AMR transfer, assembly,
+              packing).</li>
+            <li><strong>Build the model</strong> — Add stations, resources, cycle times, failure/repair and shift rules.
+            </li>
             <li><strong>Connect logic</strong> — Emulate PLC/MES signals and routing priorities for realism.</li>
-            <li><strong>Run scenarios</strong> — Vary layouts, buffers, and staffing; collect KPIs and visualize queues.</li>
+            <li><strong>Run scenarios</strong> — Vary layouts, buffers, and staffing; collect KPIs and visualize queues.
+            </li>
             <li><strong>Deploy changes</strong> — Apply the best scenario to the real line and monitor results.</li>
           </ol>
         </div>
@@ -143,10 +177,17 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Smart Factory  • Digital Simulation</div>
+      <div>© <span id="year"></span> Smart Factory</div>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <img src="assets/IIOT_light.png" class="light-only" alt="IIoT Solutions">
+        <img src="assets/IIOT_dark.png" class="dark-only" alt="IIoT Solutions">
+      </div>
     </div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="theme.js"></script>
 </body>
+
 </html>
